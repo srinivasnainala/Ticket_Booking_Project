@@ -1,0 +1,20 @@
+<html>
+        <script>
+            function reverseString() {
+                let inputString = document.getElementById("inputString").value;
+                let reversedString = inputString.split("").reverse().join("");
+                document.getElementById("result").innerHTML = "Reversed String: " + reversedString;
+                return false;
+            }
+        </script>
+    <body>
+        <h2>Reverse a String</h2>
+        <form onsubmit="return reverseString();">
+            <label for="inputString">Enter a string:</label><br><br>
+            <input type="text" id="inputString" name="inputString" required><br><br>
+            <input type="submit" value="Reverse">
+        </form>
+        <div id="result"></div>
+    
+    </body>
+    </html>

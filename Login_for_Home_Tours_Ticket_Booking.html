@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <p style="margin-top: 40px;margin-bottom: 40px;font-weight: bold;font-size: 30px;margin-left: 370px;color: rgb(161, 43, 0);">Login_for_Home_Tours_Ticket_Booking</p>
+        <title>Login_for_Home_Tours_Ticket_Booking</title>
+        <style>
+            body{
+                background-color: antiquewhite;
+            }
+         form
+         {
+            text-align: center;
+         }
+         .Username
+         {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+         }
+         .Password
+         {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+         }
+         .username{
+          margin-top: 20px;
+          border-radius: 5px;
+         }
+         .password{
+            margin-top: 20px;
+          border-radius: 5px;
+          
+         }
+         .button2
+         {
+            margin-top: 15px;
+            padding:6px;
+            border-radius: 15px;
+            margin-left: 65px;
+            color: blanchedalmond;
+            background-color: brown;
+            border-color: brown;
+            transition: background-color 0.5s;
+            cursor: pointer;
+         }
+         .button2:hover{
+            color: brown;
+            background-color:  blanchedalmond;
+         }
+         .error
+         {
+          border-color: red;
+         }
+         .error1
+         {
+          border-color: red;
+         }
+        .valid
+        {
+         border-color: rgb(51, 146, 51);
+        }
+
+        </style>
+    </head>
+    <body>
+        <form action="" id="login">
+            <label for="Username" class="Username"> Username:</label>
+            <input type="text"  id="user" class="username" style="font-size: 15px;"  placeholder="Enter Username"><br>
+            <p id="usererr"></p>
+            <label for="Username" class="Password"> Password:</label>
+            <input type="password" id="pass"  class="password" style="font-size: 15px;" placeholder="Enter Password"><br>
+            <p id="passerr"></p>
+            <input class="button2" type="button" value="Back_To_HomePage" onclick="back()">
+            <input type="button" class="button2"  value="Login" onclick="add()">
+        </form>
+    </body>
+    <script>
+      function back()
+      {
+         window.location.href="/home/miracle/Desktop/html_Practise/Welcome_Page.html";
+      }
+      function add()
+      {
+         const id="vasu";
+         const pass="vasu1234";
+         const user=document.getElementById("user").value;
+         const pass1=document.getElementById("pass").value;
+       if(id==user&&pass==pass1)
+      {
+        
+      alert("Successfully Loggined");
+      window.location.href="/home/miracle/Desktop/html_Practise/Available_Service.html";
+      }
+      else if(user!=id)
+      {
+         alert("Username not found");
+         return;
+      }
+      else if(pass1!=pass)
+      {
+         alert("password incorrect")
+      }
+      else if(user!=id||pass1!=pass)
+      {
+         alert("Username or password incorrect");
+         return;
+      }
+      }
+
+     
+      
+
+     </script>
+</html>

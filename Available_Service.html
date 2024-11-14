@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available_Services</title>
+    <style>
+        .image1
+        {
+            height: 400px;
+            width: 300px;
+            background-position: left;
+            background-size: contain;
+            margin-top: 10px;
+            margin-left: 3px;
+        }
+        .image2
+        {
+            height: 400px;
+            width: 300px;
+            background-position: center;
+            background-size: contain;
+        }
+        .image3
+        {
+            height: 400px;
+            width: 300px;
+            background-position: left;
+            background-size: contain;
+        }
+        .image4
+        {
+            height: 400px;
+            width: 350px;
+            background-position: center;
+            background-size: contain;
+        }
+        .choose1
+        {
+            position: absolute;
+            top: 530px;
+            left: 90px;
+            border-radius: 15px;
+            color: white;
+            border-color: rgb(0, 162, 255);
+            background-color:  rgb(0, 162, 255);
+            padding: 6px;
+        }
+        .choose1:hover
+        {
+            color: white;
+            border-color: rgb(0, 110, 255);
+            background-color: rgb(0, 110, 255);
+        }
+        .choose2
+        {
+            position: absolute;
+            top: 530px;
+            left: 420px;
+            border-radius: 15px;
+            color: white;
+            border-color: rgb(0, 162, 255);
+            background-color:  rgb(0, 162, 255);
+            padding: 6px;
+        }
+        .choose2:hover
+        {
+            color: white;
+            border-color: rgb(0, 110, 255);
+            background-color: rgb(0, 110, 255);
+        }
+        .choose3
+        {
+            position: absolute;
+            top: 530px;
+            left: 720px;
+            border-radius: 15px;
+            color: white;
+            border-color: rgb(0, 162, 255);
+            background-color:  rgb(0, 162, 255);
+            padding: 6px;
+        }
+        .choose3:hover
+        {
+            color: white;
+            border-color: rgb(0, 110, 255);
+            background-color: rgb(0, 110, 255);
+        }
+        .choose4
+        {
+            position: absolute;
+            top: 530px;
+            left: 1060px;
+            border-radius: 15px;
+            color: white;
+            border-color: rgb(0, 162, 255);
+            background-color:  rgb(0, 162, 255);
+            padding: 6px;
+        }
+        .choose4:hover
+        {
+            color: white;
+            border-color: rgb(0, 110, 255);
+            background-color: rgb(0, 110, 255);
+        }
+        .check
+        {
+            border-radius: 10px;
+            color: white;
+            border-color: rgb(5, 177, 48);
+            background-color:  rgb(5, 177, 48);
+            padding: 5px;
+        }
+        .check:hover
+        {
+            border-color: rgb(3, 141, 37);
+            background-color: rgb(3, 141, 37);
+        }
+        a:hover
+        {
+            color: rgb(0, 20, 204);
+        }
+        .service
+        {
+          
+            margin-top: 3px;
+            border-color: rgba(3, 126, 3, 0.863);
+            background-color: rgba(3, 126, 3, 0.863);
+            color: white;
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding: 1px;
+            margin-right: 175px;
+        }
+        .service:hover{
+            border-color: rgba(3, 100, 3, 0.863);
+            background-color: rgba(3, 100, 3, 0.863);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" style="margin-left: 1230px;" class="close" onclick="cancel()" target="_blank" value="&#10060;"></button>
+    <p style=" margin-top: 0px;margin-bottom: 10px;background-color: yellow; font-size: 60px; text-align: center; font-weight: bold;font-family: Verdana, Geneva, Tahoma, sans-serif;">Have a Nice Day!</p>
+    <label for="starting_point" style="margin-left: 458px;">Starting_point:</label>
+    <input type="text" placeholder="Enter Your Location            &#128269;" style="margin-bottom: 10px;"><br>
+    <label for="starting_point" style="margin-left: 475px;">Destination:</label>
+    <input type="text" placeholder="Enter your destination       &#128269;" style="margin-right: 150px;">
+    <label for="Date">Journey_Date:</label>
+    <input type="date" placeholder="select date">
+    <input type="button" value="check_Availability" class="check" onclick="Availability()"><br>
+    <img class="image1" src="/home/miracle/Desktop/html_Practise/pexels-rickyrecap-2496606.jpg" alt="APSRTC_SuperLuxury">
+    <input type="button" class="choose1" onclick="choose()"  target="_blank" value="To_Book_Ticket">
+    <img class="image2" src="/home/miracle/Desktop/html_Practise/pexels-elijahsad-3829175.jpg" alt="MORNINGSTAR_Travels">
+    <input type="button" class="choose2" onclick="choose()"  target="_blank" value="To_Book_Ticket">
+    <img class="image3" src="pexels-ron-ron-1598057-3796308.jpg" alt="Orange_Travels">
+    <input type="button" class="choose3" onclick="choose()"  target="_blank" value="To_Book_Ticket">
+    <img class="image4" src="/home/miracle/Desktop/html_Practise/vasu.jpg" alt="KaveriTravels">
+    <input type="button" class="choose4" onclick="choose()"  target="_blank" value="To_Book_Ticket"><br>
+    <p style="display: inline-block; font-weight: bold;font-size: 25px;margin-left: 10px;margin-right: 35px; margin-top: 5px;margin-bottom: 0px;">APSRTC_SuperLuxury</p>
+    <p style="display: inline-block; font-weight: bold;font-size: 25px;margin-left: 10px;margin-top: 5px;margin-bottom: 0px;">MORNINGSTAR_Travels</p>
+    <p style="display: inline-block; font-weight: bold;font-size: 25px;margin-left: 30px;margin-top: 5px;margin-right: 105px;margin-bottom: 0px;">Orange_Travels</p>
+    <p style="display: inline-block; font-weight: bold;font-size: 25px;margin-left: 10px;margin-top: 5px;margin-bottom: 0px;">Kaveri_Travels</p><br>
+    <input type="button" value="Check_OurServices" onclick="service()" class="service">
+    <input type="button" value="Check_OurServices" onclick="service()" class="service">
+    <input type="button" value="Check_OurServices" onclick="service()" class="service">
+    <input type="button" value="Check_OurServices" onclick="service()" class="service"><br>
+    <a href="/home/miracle/Desktop/html_Practise/travels/aps.html" style="margin-right: 110px;margin-top: 10px;">ToknowMoreAboutAPSRTC</a>
+    <a href="/home/miracle/Desktop/html_Practise/travels/morningstar.html" style="margin-right: 80px;margin-top: 10px;">ToknowMoreAboutMORNINGSTAR</a>
+    <a href="/home/miracle/Desktop/html_Practise/travels/orange.html" style="margin-right: 85px;">ToknowMoreAboutOrangeTravels</a>
+    <a href="/home/miracle/Desktop/html_Practise/travels/Kaveri.html" >ToknowMoreAboutKaveriTravels</a>
+  
+
+</body>
+<script>
+    function service()
+    {
+        alert("Loading");
+        window.location.href="https://www.abhibus.com/operator/919/APSRTC?utm_source=google&utm_medium=cpc&utm_campaign=Abhibus_RTC_Search_20%2F09%2F24&utm_term=APSRTC_Search_20%2F09%2F24&gad_source=1&gclid=Cj0KCQiAoae5BhCNARIsADVLzZfCLyAgTlfCSNU3iFw0TdTgjBh5tKBCg-K3mcKL11-59fCYig0hdCwaAhhFEALw_wcB";
+    }
+    function Availability()
+    {
+        alert("OOps Something went wrong please check later Thank You..!")
+    }
+     function cancel()
+    {
+        window.location.href="/home/miracle/Desktop/html_Practise/Login_for_Home_Tours_Ticket_Booking.html";
+    }
+    function choose()
+    {
+        window.location.href="/home/miracle/Desktop/html_Practise/SeatSelection.html";
+    }
+   
+</script>
+</html>

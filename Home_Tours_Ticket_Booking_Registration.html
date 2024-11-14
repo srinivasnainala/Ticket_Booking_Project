@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home_Tours_Ticket_Booking_Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <style>
+         
+        body
+        {
+            border: 1px;
+            margin-left: 400px;
+            margin-right: 400px;
+            text-align: center;
+            border-color: black;
+            /* background-image: url("/home/miracle/Desktop/html_Practise/pexels-nandor-nadhazi-6928092-16246071.jpg"); */
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .name
+        {
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+   
+        .fathername1
+        {
+            margin-top: 20px;
+            margin-right: 47px;
+        }
+        .Age
+        {
+            margin-top: 20px;
+            margin-right: 110px;
+            padding: 5px 5px;
+            margin-bottom: 0px;
+           height: 10px;
+           width: 45px;
+        }
+        .MobileNumber
+        {
+            margin-top: 20px;
+            margin-right: 95px;
+        }
+        .email
+        {
+            margin-top: 20px;
+        }
+        .Username
+        {
+            margin-top: 20px;
+            margin-right: 35px;
+        }
+        .password
+        {
+            margin-top: 20px;
+            margin-right: 35px;
+            border-color: grey;
+        }
+        .check
+        {
+            margin-top: 40px;
+            margin-left: 60px;
+        }
+        .State
+        {
+            margin-top: 20px;
+            margin-right: 80px;
+        }
+        .button1
+        {
+            border-color: rgb(0, 162, 255);
+            margin-left: 20px;
+            color: white;
+            background-color: rgb(0, 162, 255);
+            margin-top: 30px;
+            border-radius: 30px;
+            padding: 8px 10px;
+            cursor: pointer;
+        }
+        .button1:hover
+        {
+            border-radius: 30px;
+            background-color: white;
+            color:rgb(0, 162, 255) ;
+            border-color: rgb(0, 162, 255);
+        }
+        .Districts
+        {
+            margin-top: 20px;
+            margin-right: 30px;
+        }
+        .Village
+        {
+            margin-top: 20px;
+            margin-right: 30px;
+        }
+        .error
+        {
+            border-color: red;
+            height: 15px;
+            width: 170px;
+            margin-top: 15px;
+            margin-bottom: 0px;
+        }
+        .valid
+        {
+            border-color: rgb(0, 214, 0);
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .valid1
+        {
+            border-color: rgb(0, 214, 0);
+            margin-top: 15px;
+            margin-bottom: 15px;
+            margin-right: 50px;
+        }
+        .error1
+        {
+            border-color: red;
+            margin-top: 15px;
+            margin-bottom: 0px;
+            margin-right: 50px;
+        }
+        .error2
+        {
+            border-color: red;
+            margin-top: 15px;
+            margin-bottom: 0px;
+            margin-right: 100px;
+        }
+       
+        .valid2
+        {
+            border-color: rgb(0, 214, 0);
+            margin-top: 15px;
+            margin-bottom: 15px;
+            margin-right: 100px;
+        }
+        p{
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+
+        .back
+         {
+        color: white;
+        background-color: rgb(255, 0, 34);
+        border-color:rgb(255, 0, 34);
+        border-radius: 25px;
+        padding: 6px;
+        margin-left: 45px;
+        font-size: 15px;
+        }
+        .back:hover
+        {
+        color: white;
+        background-color: rgb(187, 7, 31);
+        border-color: rgb(187, 7, 31);
+        }
+    </style>
+</head>
+<body>
+<h1 style="font-weight: bold;color:rgb(172, 41, 41); text-align: center; font-size: 30px;"><u>Register for Home_Tours_Ticket_Bookings</u></h1>
+<form   method="post"> 
+<label style="font-weight: bold;" for="Name">Name:</label>
+<input type="text" class="name" name="Name" onblur="validatename()" placeholder="Enter your name" id="name"><br>
+<p id="name1"></p>
+<label style="font-weight: bold;" for="Fathername" class="fathername" style="margin-left: 20px; margin-top: 10px;">Fathername:</label>
+<input type="text" class="fathername1" name="Name" onblur="validatefathername()" placeholder="Enter your Fathername" id="fathername" ><br>
+<p id="fname"></p>
+<label style="font-weight: bold;" for="MobileNumber">MobileNumber:  +91</label>
+<input type="number" id="mobile" class="MobileNumber"  onblur="validatemobilenumber()" placeholder="Enter MobileNumber" ><br>
+<p id="mobile1"></p>
+<label style="font-weight: bold;" for="email">Email:</label>
+<input type="email" class="email" id="email" onblur="validateemail()" placeholder="Enter your email" ><br>
+<p id="email1"></p>
+<label style="font-weight: bold;" for="Age">Age:</label>
+<input type="number" id="a" onblur="validateage()" class="Age" placeholder="Age" ><br>
+<p id="age"></p>
+<label for="Gender" style="font-weight: bold; margin-top: 30px;">Gender:</label>
+<input type="radio" style="margin-bottom: 10px;" id="Gender" name="Gender" value="male">  
+<label for="male" style="margin-right: 30px; margin-top: 20px;">Male</label>
+<input type="radio" id="Gender"  name="Gender" style="margin-left: 0px;" value="Female">
+<label for="female" style="margin-right: 30px;margin-top: 10px;">Female</label><br>
+<label for="Username" style="font-weight: bold;">Username:</label>
+<input type="text" placeholder="Enter your Username" id="user" onblur="validateusername()" class="Username" ><br>
+<p id="username"></p>
+<label for="password" style="font-weight: bold;">password:</label>
+<input type="password" id="pass" onblur="validatepassword()" class="password" placeholder="Set password" ><br>
+<p id="password"></p>
+<input type="password"  id="pass1" onblur="validatepassword1()" class="password" style="margin-left: 70px;" placeholder="Re-enter password" ><br>
+<p id="password1"></p>
+<label style="font-weight: bold;" for="State">State:</label>
+<select  class="State" onblur="validatestate()" id="state">
+    <option  disabled>Select State</option>
+    <option >AndhraPradesh</option>
+    <option >Telangana</option>
+    <option >Kerala</option>
+    <option >Tamilnadu</option>
+</select><br>
+<p id="s"></p>
+<label style="font-weight: bold;" for="Districts">District:</label>
+<input  type="text" class="Districts" id="district" placeholder="Enter your District" list="Districts">
+<datalist id="Districts">
+    <option value="Konaseema"></option>
+    <option value="Vizianagaram"></option>
+    <option value="Vizag"></option>
+    <option value="Tirupathi"></option>
+</datalist><br>
+<p id="district"></p>
+<label style="font-weight: bold;" for="Village">Village:</label>
+<input type="text" name="Village" id="village" class="Village" placeholder="Enter your Village">
+<p id="village"></p>
+<input type="checkbox" class="check">
+<label >I agree with terms & conditions</label><br>
+<p id="check"></p>
+<input type="button" class="back" value="Back_to_Homepage" onclick="back()">
+<input class="button1" type="button" onclick="validateform()" value="Register"><br>
+</form>
+</body>
+<script>
+    function validateform()
+    {
+       let isValid=true;
+     validatename();
+     if(document.getElementById("name1").innerHTML!=="")
+     {
+        isValid=false;
+     }
+     validatefathername();
+     if(document.getElementById("fname").innerHTML!=="")
+     {
+        isValid=false;
+     }
+     validatemobilenumber();
+     if(document.getElementById("mobile1").innerHTML!=="")
+     {
+        isValid=false;
+     }
+     validateemail();
+     if(document.getElementById("email1").innerHTML!=="")
+     {
+        valid=false;
+     }
+     validateage();
+     if(document.getElementById("age").innerHTML!=="")
+     {
+        isValid=false;
+     }
+     validateusername();
+     if(document.getElementById("username").innerHTML!=="")
+     {
+        isValid=false;
+     }
+     validatepassword();
+     if(document.getElementById("password").innerHTML!=="")
+     {
+        isValid=false;
+     }
+     validatepassword1();
+     if(document.getElementById("password1").innerHTML!=="")
+     {
+        isValid=false;
+     }
+     const name=document.getElementById("name").value;
+     const fathername=document.getElementById("fathername").value;
+     const mobile=document.getElementById("mobile").value;
+     const email=document.getElementById("email").value;
+     const age=document.getElementById("a").value;
+     const username=document.getElementById("user").value;
+     const password=document.getElementById("pass").value;
+     const password1=document.getElementById("pass1").value;
+     const district=document.getElementById("district").value;
+     const village=document.getElementById("village").value;
+     if(!name||!fathername||!mobile||!email||!age||!username||!password||!password1||!district||!village)
+     {
+        alert("please fill all details");
+        return;
+     }
+     if(!isValid)
+     {
+        alert("Please check the form");
+        return;
+     }
+     alert("Registered successfully");
+     window.location.href="/home/miracle/Desktop/html_Practise/Welcome_Page.html";
+    }
+        function back()
+        {
+            window.location.href="/home/miracle/Desktop/html_Practise/Welcome_Page.html";
+        }
+    function validatename()
+        {
+            const name=document.getElementById("name");
+            const notify=document.getElementById("name1");
+            notify.innerHTML="";
+            const pattern=/^[A-Za-z ]+$/;
+            if(name.value.length==" ")
+            {
+            notify.innerHTML="Name should not be empty";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="48px";
+            name.className="error";
+            }
+            else if(!name.value.match(pattern))
+            {
+            notify.innerHTML="Please enter alphabets";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="40px";
+            name.className="error";
+            }
+            else if(name.value.length<3)
+            {
+            notify.innerHTML="Name should contain atleast 3 characters";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="130px";
+            name.className="error";
+            }
+            else if(name.value.length>15)
+            {
+            notify.innerHTML="Name not should be more than 15 characters";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="150px";
+            name.className="error";
+            }
+            else
+            {
+                name.className="valid";
+            }
+        }
+        function validatefathername()
+        {
+            const fathername=document.getElementById("fathername");
+            const notify=document.getElementById("fname");
+            notify.innerHTML="";
+            const pattern=/^[A-Za-z ]+$/;
+            if(fathername.value.length==" ")
+            {
+            notify.innerHTML="Fathername should not be empty";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="28px";
+            fathername.className="error1";
+            }
+            else if(!fathername.value.match(pattern))
+            {
+            notify.innerHTML="Please enter alphabets";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            fathername.className="error1";
+            }
+            else if(fathername.value.length<3)
+            {
+            notify.innerHTML="Fathername should contain atleast 3 characters";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="90px";
+            fathername.className="error1";
+            }
+            else if(fathername.value.length>15)
+            {
+            notify.innerHTML="Fathername not should be more than 15 characters";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="150px";
+            fathername.className="error1";
+            }
+            else
+            {
+                fathername.className="valid1";
+            }
+        }
+        
+        function validatemobilenumber()
+        {
+            const mobile=document.getElementById("mobile");
+            const notify=document.getElementById("mobile1");
+            const pattern=/^[0-9]{10}$/;
+            notify.innerHTML="";
+            if(mobile.value=="")
+            {
+            notify.innerHTML="MobileNumber should not be empty";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="30px";
+            mobile.className="error2";
+            }
+            else if(!mobile.value.match(pattern))
+            {
+            notify.innerHTML="please enter a valid mobilenumber";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="30px";
+            mobile.className="error2";
+            }
+            else{
+                mobile.className="valid2";
+            }
+        }
+
+        function validateemail()
+        {
+            const email=document.getElementById("email");
+            const notify=document.getElementById("email1");
+            notify.innerHTML="";
+            const pattern= /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if(email.value.length==" ")
+            {
+            notify.innerHTML="Email should not be empty";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="68px";
+            email.className="error";
+            }
+            else if(!email.value.match(pattern))
+            {
+            notify.innerHTML="please enter a valid email";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="40px";
+            email.className="error";
+            }
+            else
+            {
+                email.className="valid";
+            }
+        }
+
+        function validateage()
+        {
+            const age=document.getElementById("a");
+            const notify=document.getElementById("age");
+            notify.innerHTML="";
+            if(age.value=="")
+            {
+            notify.innerHTML="Age should not be empty";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="130px";
+            notify.className="error";
+            }
+         else if(age.value<18)
+           {
+            notify.innerHTML="You are not allowed";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="500px";
+            notify.className="error";
+           }
+           else
+           {
+            notify.className="valid";
+           }
+        }
+
+        function validateusername()
+        {
+            const username=document.getElementById("user");
+            const notify=document.getElementById("username");
+            notify.innerHTML="";
+            const pattern=/^[A-Za-z ]+$/;
+            if(username.value.length==" ")
+            {
+            notify.innerHTML="Username should not be empty";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="10px";
+            notify.style.marginBottom="10px";
+            username.className="error1";
+            }
+            else if(!username.value.match(pattern))
+            {
+            notify.innerHTML="Please enter alphabets";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="0px";
+            username.className="error1";
+            }
+            else if(username.value.length<3)
+            {
+            notify.innerHTML="Username should contain atleast 3 characters";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="50px";
+            username.className="error1";
+            }
+            else if(username.value.length>15)
+            {
+            notify.innerHTML="Username not should be more than 15 characters";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="70px";
+            username.className="error1";
+            }
+            else
+            {
+                username.className="valid1";
+            }
+        }
+        
+        function validatepassword()
+        {
+            const password=document.getElementById("pass");
+            const notify=document.getElementById("password");
+            const pattern= /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,15}$/;
+            notify.innerHTML="";
+            if(password.value=="")
+            {
+            notify.innerHTML="Password should not be empty";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="20px";
+            password.className="error1";
+            }
+            else if(!password.value.match(pattern))
+            {
+            notify.innerHTML="password should be alphanumeric";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="20px";
+            password.className="error1";
+            }
+            else if(!password.value.match(pattern)&&password.value.length<15)
+            {
+            notify.innerHTML="password should be lessthan 15 characters";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="20px";
+            password.className="error1";
+            }
+            else if(!password.value.match(pattern)&&password.value.length>8)
+            {
+            notify.innerHTML="password should be Greaterthan 8 characters";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="20px";
+            password.className="error1";
+            }
+            else
+            {
+                password.className="valid1";
+            }
+        }
+
+        function validatepassword1()
+        {
+            const pass=document.getElementById("pass");
+            const password=document.getElementById("pass1");
+            const notify=document.getElementById("password1");
+            const pattern= /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,15}$/;
+            notify.innerHTML="";
+            if(password.value=="")
+            {
+            notify.innerHTML="Password should not be empty";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="20px";
+            password.className="error1";
+            }
+            else if(!password.value.match(pattern))
+            {
+            notify.innerHTML="password should be alphanumeric";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="20px";
+            password.className="error1";
+            }
+            else if(!password.value.match(pattern)&&password.value.length<15)
+            {
+            notify.innerHTML="password should be lessthan 15 characters";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="20px";
+            password.className="error1";
+            }
+            else if(!password.value.match(pattern)&&password.value.length>8)
+            {
+            notify.innerHTML="password should be Greaterthan 8 characters";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="20px";
+            password.className="error1";
+            }
+            else if(pass.value!=password.value)
+            {
+                notify.innerHTML="password should be same";
+                notify.style.color="red";
+                notify.style.fontSize="12px";
+                notify.style.fontfamily="verdana";
+                notify.style.marginLeft="20px";  
+                password.className="error1";
+            }
+            else
+            {
+                password.className="valid1";
+            }
+        }
+
+        function validatestate()
+        {
+            const state=document.getElementById("state");
+            const notify=document.getElementById("s");
+            if(state.value=="")
+            {
+            notify.innerHTML="please select your State";
+            notify.style.color="red";
+            notify.style.fontSize="12px";
+            notify.style.fontfamily="verdana";
+            notify.style.marginLeft="20px";
+            notify.className="error";
+            }
+            else
+            {
+                notify.className="valid";
+            }
+        }
+</script>
+</html>

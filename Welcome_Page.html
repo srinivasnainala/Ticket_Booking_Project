@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>WELCOME_PAGE</title>
+        <p style="color:rgb(255, 221, 70);" class="p1">WELCOME_TO_HOME_TOURS_TICKET_BOOKINGS</p>
+        <STYle>
+            .p1
+            {
+                background-color: black;
+                margin-top: 60px;
+                font-weight: bold;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 45px;
+                margin-bottom: 90px;
+            }
+            body
+            {
+            border: 1px;
+            margin-left: 400px;
+            margin-right: 400px;
+            text-align: center;
+            border-color: black;
+            /* background-image: url("/home/miracle/Desktop/html_Practise/pexels-aleksmagnusson-3071474.jpg"); */
+            background-image: url("/home/miracle/Desktop/html_Practise/pexels-quang-nguyen-vinh-222549-2884745.jpg");
+           
+            background-position: right;
+            object-position: right;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0px;
+            }
+            .Login
+            {
+                border-color:rgb(0, 162, 255);
+                color: white;
+                background-color:rgb(0, 162, 255) ;
+                border-radius: 10px;
+                font-weight: bold;
+                margin-left: 20px;
+                margin-bottom: 20px;
+                padding: 6px;
+                margin-right: 520px;
+            }
+
+            .Login:hover
+            {
+                border-color:rgb(0, 132, 255);
+                color: white;
+                background-color:rgb(0, 132, 255);
+            }
+            .Register
+            {
+                border-color:rgb(0, 162, 255);
+                color: white;
+                background-color:rgb(0, 162, 255) ;
+                border-radius: 10px;
+                margin-left: 20px;
+                font-weight: bold;
+                margin-right: 580px;
+                padding: 6px;
+            }
+            .Register:hover
+            {
+                border-color:rgb(0, 132, 255);
+                color: white;
+                background-color:rgb(0, 132, 255);
+            }
+          
+            .loginpage
+            {
+                 text-align: center; 
+            }
+            .vasu
+            {
+                font-weight: bold;
+                margin-left: 80px;
+                text-align: left;
+                color: white;
+                width: 600px;
+                margin-bottom: 30px;
+            }
+        </STYle>
+    </head>
+    <body>
+        <div class="vasu">
+            <p style="color: white;">
+                Welcome to Home_Tours! 🌍
+
+Discover new places, plan unforgettable adventures, and make memories around the world with Home_Tours . Our app brings you personalized travel recommendations, exclusive deals, and a seamless booking experience —
+                    <br>whether you're exploring a local hidden gem or jetting off to a faraway paradise.
+                    <br>
+                    <br>
+                    Let’s start your next adventure!
+            </p>
+        </div>
+        <div class="loginPage">
+        <label  style="font-weight: bold;color: white;" for="Login">Login :</label>
+        <button class="Login"  target="_blank" onclick="login()">Click to Login</button>
+        <br><br>
+        <label for="Register" style="font-weight: bold; color: white;" >Register/SignUp :</label>
+        <button class="Register" style="size: 40px;" target="_blank" onclick="register()">Click to Register</button>
+        </div> 
+      
+    </body>
+    <script>
+      function login()
+      {
+        window.location.href="/home/miracle/Desktop/html_Practise/Login_for_Home_Tours_Ticket_Booking.html";
+      }
+      function register()
+      {
+        window.location.href="/home/miracle/Desktop/html_Practise/Home_Tours_Ticket_Booking_Registration.html";
+      }
+    </script>
+</html>

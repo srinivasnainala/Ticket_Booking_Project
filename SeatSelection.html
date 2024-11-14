@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seat_Selection</title>
+    <style>
+        body
+        {
+            background-image: url("/home/miracle/Desktop/html_Practise/pexels-jen-1133763-2203416.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .seat
+        {
+            margin-left: 15px;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 5px;
+            background-color: greenyellow;
+            display: inline-block;
+        }
+        .seat2
+        {
+            margin-left: 60px;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 5px;
+            background-color: greenyellow;
+            display: inline-block;
+        }
+        .seat3
+        {
+            margin-left: 15px;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 5px;
+            background-color: greenyellow;
+            display: inline-block;
+        }
+        .seat1
+        {
+            margin-left: 450px;
+            font-size: 20px;
+          
+            margin-bottom: 5px;
+            background-color: greenyellow;
+        }
+        .seat-table
+        {
+            border: 1px;
+            border-color: black;
+        }
+        .selected
+        {
+            color: white;
+            background-color: rgb(13, 160, 0);
+        }
+        .proceedbutton
+        {
+          margin-left: 240px;
+          border-color: rgb(247, 212, 19);
+          background-color: rgb(247, 212, 19);
+          color: black;
+          padding: 10px;
+          display: inline-block;
+          border-radius: 15px;
+        }
+        .proceedbutton:hover{
+            border-color: rgb(247, 212, 19);
+          background-color:white;
+          color: rgb(247, 34, 19);
+        }
+        .backbutton
+        {
+          margin-left: 450px;
+          border-color: rgb(247, 34, 19);
+          background-color: rgb(247, 34, 19);
+          color: white;
+          padding: 10px 15px;
+          border-radius: 15px;
+          display: inline-block;
+        }
+        .backbutton:hover
+        {
+          color: rgb(247, 34, 19);
+          background-color:white;
+          border-color: rgb(247, 34, 19);
+        }
+    </style>
+</head>
+<body>
+    <p style="text-align: center; margin-top: 30px;font-weight: bold;color: rgb(248, 64, 31);background-color: white; font-size: 45px;margin-right: 25px;margin-left: 15px;"><u>Select Your Seat</u></p>
+    <table class="seat-table">
+        <tr>
+            <td><button onclick="change(this)" class="seat1">1    &#x1f4ba;</button></td>
+            <td><button class="seat" onclick="change(this)">2    &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat2">3    &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat3">4    &#x1f4ba; </button></td>
+        </tr>
+        <tr>
+            <td><button onclick="change(this)" class="seat1">5 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat">6 &#x1f4ba; </button></td>
+            <td><button onclick="change(this)" class="seat2">7 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat3">8 &#x1f4ba;</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="change(this)" class="seat1">9 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat">10 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat2">11 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat3">12 &#x1f4ba;</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="change(this)" class="seat1">13 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat">14 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat2">15 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat3">16 &#x1f4ba;</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="change(this)" class="seat1">17 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat">18 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat2">19 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat3">20 &#x1f4ba;</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="change(this)" class="seat1">21 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat">22 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat2">23 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat3">24 &#x1f4ba;</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="change(this)" class="seat1">25 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat">26 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat2">27 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat3">28 &#x1f4ba;</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="change(this)" class="seat1">29 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat">30 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat2">31 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat3">32 &#x1f4ba;</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="change(this)" class="seat1">33 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat">34 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat2">35 &#x1f4ba;</button></td>
+            <td><button onclick="change(this)" class="seat3">36 &#x1f4ba;</button></td>
+        </tr>
+    </table>
+    <p style="margin-left: 450px;font-weight: bold; color: white;"> Seats Selected :<span id="p" style="font-weight: bold;margin-left: 8px;color: white;"></span></p>
+  <br>
+    <input class="backbutton" type="button" onclick="Back()" value="Back">
+    <input class="proceedbutton" type="button" onclick="Book()" value="Proceed">
+    <script>
+        function change(button)
+        {
+            button.classList.toggle("selected");
+            const count=document.querySelectorAll("button.selected").length;
+            document.getElementById("p").innerHTML=count;
+        }
+        function Back()
+        {
+            window.location.href="/home/miracle/Desktop/html_Practise/Available_Service.html";
+        }
+        function Book()
+        {
+            const count=document.querySelectorAll("button.selected").length;
+            document.getElementById("p").innerHTML=count;
+            if(count==0)
+        {
+            alert("Select atleast one");
+        }
+        else
+        {
+         alert("Selected  seats is :" +count);
+         window.location.href="/home/miracle/Desktop/html_Practise/Book_Ticket.html";
+        }
+        }    
+    </script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book_your_Ticket</title>
+    <style>
+        body
+        {
+            background-image: url("/home/miracle/Desktop/html_Practise/pexels-onorblog-15395948.jpg");
+        }
+         
+        .booking
+        {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 68px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin-left: 410px;
+        }
+        .button
+        {
+            color: white;
+            background-color: rgb(0, 153, 255);
+            border-color:rgb(0, 153, 255) ;
+            border-radius: 25px;
+            padding: 6px;
+            margin-left: 35px;
+            font-size: 15px;
+        }
+        .button:hover
+        {
+            color: white;
+            background-color: rgb(0, 102, 255);
+            border-color: rgb(0, 102, 255);
+        }
+        .close
+        {
+            margin-top: -290px;
+            margin-left: 450px;
+            display: inline-block;
+        }
+        .close:hover
+        {
+            color: white;
+            font-weight: bold;
+            background-color: rgba(248, 248, 248, 0.904);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            color: rgb(255, 8, 0);
+            margin-bottom: 00px;
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+        
+        .button1
+        {
+            color: white;
+            background-color: rgb(255, 0, 34);
+            border-color:rgb(255, 0, 34);
+            border-radius: 25px;
+            padding: 6px;
+            margin-left: 35px;
+            font-size: 15px;
+        }
+        .button1:hover
+        {
+            color: white;
+            background-color: rgb(187, 7, 31);
+            border-color: rgb(187, 7, 31);
+        }
+        .error
+        {
+            border-color: red;
+            height: 15px;
+            width: 170px;
+            margin-top: 15px;
+            margin-bottom: 0px;
+        }
+        .valid
+        {
+            border-color: rgb(0, 214, 0);
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="booking">
+    <div class="header">
+    <p style="margin-left: 25px; display: inline-block; font-weight: bold;margin-bottom: 30px; font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 40px;color: rgb(255, 8, 0); margin-top: 0px;">Book_your_Ticket</p>
+    <button class="close" onclick="cancel()">&#10060;</button>
+    </div>
+    <p style="font-weight: bold;font-size: 25px; margin-right: 90px;margin-bottom: 30px;">User_Details</p>
+    <label for="name">Name:</label>
+    <input type="text" id="name" onblur="validatename()" placeholder="Enter your name">
+    <p id="nameerr"></p>
+    <label for="age">Age:</label>
+    <input type="number" id="age" onblur="validateage()" style="height: 15px;width: 40px;margin-right: 130px;" placeholder="age" >
+    <p id="ageerr"></p>
+    <label for="email">Email:</label>
+    <input type="text" id="email" onblur="validateemail()" placeholder="enter your email">
+    <p id="emailerr"></p>
+    <label for="state">State:</label>
+    <input type="text" onblur="validatestate()" style="font-weight: bold;" placeholder="enter your state" id="state">
+    <p id="stateerr" style="margin-bottom: 30px;"></p>
+    <label for="Passenger_Details" style="font-weight: bold;font-size: 25px; margin-right: 20px;margin-bottom: 30px;">Passenger_Details</label><br><br>
+    <label for="name" >Passenger_Name:</label>
+    <input type="text" id="Pname" onblur="validatePname()" style="margin-right: 90px;" placeholder="Enter passenger name">
+    <p id="pnameerr"></p>
+    <label for="name" >Passenger_Age:</label>
+    <input type="number" id="page" onblur="validateage1()" placeholder="age" style="height: 15px;width: 40px;margin-right: 220px;">
+    <p id="pageerr"></p>
+    <label for="gender" style="margin-right: 5px;">Gender:</label>
+    <input type="radio" style="margin-right: 5px;margin-left: 10px;"  id="male" name="gender" value="male">
+    <label for="Male">male</label>
+    <input type="radio" style="margin-left: 10px;"  id="female" name="gender" value="female">
+    <label for="female">female</label>
+    <input type="radio" style="margin-left: 10px;margin-bottom: 50px;margin-right: 5px;"  id="other" name="gender" value="other">Other <br>
+    <input type="button" class="button1" value="back" onclick="back()">
+    <input type="button" class="button" onclick="validateDetails()" value="Proceed_To_Payment">
+    </div>
+    <script>
+        function back()
+        {
+            window.location.href="/home/miracle/Desktop/html_Practise/SeatSelection.html";
+        }
+        function cancel()
+        {
+            window.location.href="/home/miracle/Desktop/html_Practise/Available_Service.html";
+        }
+        function validateDetails()
+        {
+         let valid=true;  
+         validatename();
+         if(document.getElementById("nameerr").innerHTML!=="")
+         {
+            valid=false;
+         } 
+         validateage();
+         if(document.getElementById("ageerr").innerHTML!=="")
+         {
+            valid=false;
+         } 
+        validateemail();
+         if(document.getElementById("emailerr").innerHTML!=="")
+         {
+            valid=false;
+         } 
+         validatestate();
+         if(document.getElementById("stateerr").innerHTML!=="")
+         {
+            valid=false;
+         }
+         validatePname();
+         if(document.getElementById("pnameerr").innerHTML!=="")
+         {
+            valid=false;
+         }
+         validateage1();
+         if(document.getElementById("pageerr").innerHTML!=="")
+         {
+            valid=false;
+         }
+            const name=document.getElementById("name").value;
+            const age=document.getElementById("age").value;
+            const email=document.getElementById("email").value;
+            const state=document.getElementById("state").value;
+          
+          
+            if(!name||!age||!email||!state)
+            {
+                alert("Please fill the details before you want to proceed");
+                return;
+            }
+            if(!valid)
+            {
+                alert("Please fill the details before you want to proceed");
+                return;
+            }
+            else
+            {
+                alert("Proceed to payment");
+            }
+        }
+
+        function validatename()
+        {
+            const name=document.getElementById("name");
+            const nameerr=document.getElementById("nameerr");
+            nameerr.innerHTML="";
+            if(name.value.length==""||/^[A-Za-z]+$/.test(name))
+             {
+                nameerr.innerHTML="Required please enter only letters";
+                nameerr.className="error";
+                nameerr.style.color="red";
+                nameerr.style.fontSize="12px";
+                nameerr.style.marginLeft="130px";
+                nameerr.style.marginTop="5px";
+                name.className="error";
+             }
+             else if(name.value.length<3)
+             {
+                nameerr.innerHTML="Name Should be more than 3 letters";
+                nameerr.className="error";
+                nameerr.style.color="red";
+                nameerr.style.fontSize="12px";
+                nameerr.style.marginLeft="130px";
+                nameerr.style.marginTop="5px";
+                name.className="error";
+             }
+             else
+             {
+                name.className="valid";
+             }
+        }
+        function validateage()
+        {
+            const age=document.getElementById("age");
+            const ageerr=document.getElementById("ageerr");
+            ageerr.innerHTML="";
+            if(age.value.length=="")
+        {
+            ageerr.innerHTML="Required";
+            ageerr.className="error";
+            ageerr.style.color="red";
+            ageerr.style.fontSize="12px";
+            ageerr.style.marginLeft="70px";
+            ageerr.style.marginTop="5px";
+            age.className="error";
+        }
+        else
+        {
+            age.className="valid";
+        }
+        }
+        function validateemail()
+        {
+            const email=document.getElementById("email");
+            const emailerr=document.getElementById("emailerr");
+            emailerr.innerHTML="";
+            if(email.value.length=="")
+        {
+            emailerr.innerHTML="Required";
+            emailerr.className="error";
+            emailerr.style.color="red";
+            emailerr.style.fontSize="12px";
+            emailerr.style.marginLeft="70px";
+            emailerr.style.marginTop="5px";
+            email.className="error";
+        }
+        else
+        {
+            email.className="valid";
+        }
+        }
+        function validatestate()
+        {
+            const state=document.getElementById("state");
+            const stateerr=document.getElementById("stateerr");
+            stateerr.innerHTML="";
+            if(state.value.length=="")
+             {
+                stateerr.innerHTML="Required";
+                stateerr.className="error";
+                stateerr.style.color="red";
+                stateerr.style.fontSize="12px";
+                stateerr.style.marginLeft="70px";
+                stateerr.style.marginTop="5px";
+                state.className="error";
+             }
+             else
+             {
+                state.className="valid";
+             }
+        }
+        function validatePname()
+        {
+            const pname=document.getElementById("Pname");
+            const pnameerr=document.getElementById("pnameerr");
+            pnameerr.innerHTML="";
+            if(pname.value.length=="")
+             {
+                pnameerr.innerHTML="Required";
+                pnameerr.className="error";
+                pnameerr.style.color="red";
+                pnameerr.style.fontSize="12px";
+                pnameerr.style.marginLeft="60px";
+                pnameerr.style.marginTop="5px";
+                pname.className="error";
+             }
+             else
+             {
+                pname.className="valid";
+             }
+        }
+        function validateage1()
+        {
+            const page=document.getElementById("page");
+            const pageerr=document.getElementById("pageerr");
+            pageerr.innerHTML="";
+            if(page.value.length=="")
+             {
+                pageerr.innerHTML="Required";
+                pageerr.className="error";
+                pageerr.style.color="red";
+                pageerr.style.fontSize="12px";
+                pageerr.style.marginLeft="60px";
+                pageerr.style.marginTop="5px";
+                page.className="error";
+             }
+             else
+             {
+                page.className="valid";
+             }
+        }
+    </script>
+</body>
+</html>
